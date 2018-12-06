@@ -30,8 +30,8 @@
 	 type="text/css">
 
 	<!-- Custom styles for this template -->
-	<link href="css/landing-page.min.css" rel="stylesheet">
-	<!-- <link href="css/landing-page.css" rel="stylesheet"> -->
+	<!-- <link href="css/landing-page.min.css" rel="stylesheet"> -->
+	<link href="css/landing-page.css" rel="stylesheet">
 
 </head>
 
@@ -60,6 +60,7 @@
 						<a href="#" id="experience-content-link" class="list-group-item menu-list-item">Experience</a>
 						<a href="#" id="projects-content-link" class="list-group-item menu-list-item">Projects</a>
 						<a href="#" id="honors-awards-content-link" class="list-group-item menu-list-item">Honors &amp; Awards</a>
+						<a href="#" id="technical-skills-content-link" class="list-group-item menu-list-item">Technical Skills</a>
 					</div>
 					<div class="form-group">
 						<select class="form-control" id="menu-select">
@@ -67,6 +68,7 @@
 							<option value="experience">Experience</option>
 							<option value="projects">Projects</option>
 							<option value="honors-awards">Honors &amp; Awards</option>
+							<option value="technical-skills">Technical Skills</option>
 						</select>
 					</div>
 				</div>
@@ -227,6 +229,61 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div id="technical-skills-content" class="col-md-9 content">
+					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+						<h3>Technical Skills</h3>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-code"></i>&nbsp;&nbsp;&nbsp;Programming Language</h5>
+										<p class="card-text">JavaScript, R, Python, Java, Typescript, C, C++, Octave</p>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;&nbsp;Mobile Technologies</h5>
+										<p class="card-text">Android, Ionic Framework, Flutter, Oracle JET, Oracle MCS</p>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-robot"></i>&nbsp;&nbsp;&nbsp;Robotic Process Automation</h5>
+										<p class="card-text">UiPath</p>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-toolbox"></i>&nbsp;&nbsp;&nbsp;Tools and Technologies</h5>
+										<p class="card-text">Adobe Photoshop, R Studio, Android Studio, LaTeX</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;&nbsp;Web Technologies</h5>
+										<p class="card-text">NodeJS, Angular, PHP, Firebase, Spring, Hibernate, Bootstrap, WordPress</p>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-headset"></i>&nbsp;&nbsp;&nbsp;Virtual Assistants, Chatbot</h5>
+										<p class="card-text">Amazon Alexa, Google Assistant, API.AI, Oracle Intelligent Bot</p>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><i class="fas fa-database"></i>&nbsp;&nbsp;&nbsp;Databases</h5>
+										<p class="card-text">MySQL, Oracle, SQLite</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="social-div">
@@ -248,8 +305,8 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script>
-		let contentIds = "#about-me-content, #experience-content, #projects-content, #honors-awards-content";
-		let contentLinkIds = "#about-me-content-link, #experience-content-link, #projects-content-link, #honors-awards-content-link";
+		let contentIds = "#about-me-content, #experience-content, #projects-content, #honors-awards-content, #technical-skills-content";
+		let contentLinkIds = "#about-me-content-link, #experience-content-link, #projects-content-link, #honors-awards-content-link, #technical-skills-content-link";
 
 		let displayContent = function (contentName) {
 			let contentId = "#" + contentName + "-content";
@@ -278,6 +335,10 @@
 
 		$("#honors-awards-content-link").click(function () {
 			displayContent("honors-awards");
+		});
+
+		$("#technical-skills-content-link").click(function () {
+			displayContent("technical-skills");
 		});
 
 		$("#menu-select").on('change', function () {
