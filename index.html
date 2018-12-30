@@ -49,7 +49,8 @@
 				<div class="col-md-9 header-content content content-active">
 					<h1 class="name-header">Roshan Neil Lasrado</h1>
 					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-						<h3>Software Engineer &amp; Machine Learning Enthusiast</h3>
+						<h3 id="desc1">Software Engineer &amp; Machine Learning Enthusiast</h3>
+						<h3 id="desc2">Backpacker, Philosopher &amp; Bibliophile</h3>
 					</div>
 
 				</div>
@@ -59,7 +60,7 @@
 					<div class="list-group menu-list-group container">
 						<a href="#" id="about-me-content-link" class="list-group-item menu-list-item active">About me</a>
 						<a href="#" id="experience-content-link" class="list-group-item menu-list-item">Experience</a>
-						<a href="#" id="projects-content-link" class="list-group-item menu-list-item">Projects</a>
+						<a href="#" id="academic-projects-content-link" class="list-group-item menu-list-item">Academic Projects</a>
 						<a href="#" id="honors-awards-content-link" class="list-group-item menu-list-item">Honors &amp; Awards</a>
 						<a href="#" id="technical-skills-content-link" class="list-group-item menu-list-item">Technical Skills</a>
 					</div>
@@ -67,7 +68,7 @@
 						<select class="form-control" id="menu-select">
 							<option value="about-me">About me</option>
 							<option value="experience">Experience</option>
-							<option value="projects">Projects</option>
+							<option value="academic-projects">Academic Projects</option>
 							<option value="honors-awards">Honors &amp; Awards</option>
 							<option value="technical-skills">Technical Skills</option>
 						</select>
@@ -165,9 +166,9 @@
 					</div>
 				</div>
 
-				<div id="projects-content" class="col-md-9 content">
+				<div id="academic-projects-content" class="col-md-9 content">
 					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-						<h3>Projects</h3>
+						<h3>Academic Projects</h3>
 						<div class="bulleted-content"><i class="fas fa-cogs fa-lg bullet-point"></i>
 							<div class="text-content lead mb-0">
 								<b>Decision Support System to assist farmers select crops in specific climatic conditions (2016)</b>
@@ -307,8 +308,8 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script>
-		let contentIds = "#about-me-content, #experience-content, #projects-content, #honors-awards-content, #technical-skills-content";
-		let contentLinkIds = "#about-me-content-link, #experience-content-link, #projects-content-link, #honors-awards-content-link, #technical-skills-content-link";
+		let contentIds = "#about-me-content, #experience-content, #academic-projects-content, #honors-awards-content, #technical-skills-content";
+		let contentLinkIds = "#about-me-content-link, #experience-content-link, #academic-projects-content-link, #honors-awards-content-link, #technical-skills-content-link";
 
 		let displayContent = function (contentName) {
 			let contentId = "#" + contentName + "-content";
@@ -331,8 +332,8 @@
 			displayContent("experience");
 		});
 
-		$("#projects-content-link").click(function () {
-			displayContent("projects");
+		$("#academic-projects-content-link").click(function () {
+			displayContent("academic-projects");
 		});
 
 		$("#honors-awards-content-link").click(function () {
@@ -346,6 +347,21 @@
 		$("#menu-select").on('change', function () {
 			displayContent(this.value);
 		});
+
+		$("#desc1").toggle();
+		setInterval(function(){
+			if ($("#desc1").is(':visible')) {
+				$("#desc1").fadeToggle("fast", function () {
+					$("#desc2").fadeToggle("fast");
+				});
+			} else {
+				$("#desc2").fadeToggle("fast", function () {
+					$("#desc1").fadeToggle("fast");
+				});
+			}
+			
+			
+		 }, 5000);
 	</script>
 
 </body>
