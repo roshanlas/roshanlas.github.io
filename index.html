@@ -63,6 +63,7 @@
 						<a href="#" id="academic-projects-content-link" class="list-group-item menu-list-item">Academic Projects</a>
 						<a href="#" id="honors-awards-content-link" class="list-group-item menu-list-item">Honors &amp; Awards</a>
 						<a href="#" id="technical-skills-content-link" class="list-group-item menu-list-item">Technical Skills</a>
+						<a href="#" id="community-social-service-content-link" class="list-group-item menu-list-item">Community &amp; Social Service</a>
 					</div>
 					<div class="form-group">
 						<select class="form-control" id="menu-select">
@@ -71,6 +72,7 @@
 							<option value="academic-projects">Academic Projects</option>
 							<option value="honors-awards">Honors &amp; Awards</option>
 							<option value="technical-skills">Technical Skills</option>
+							<option value="community-social-service">Community &amp; Social Service</option>
 						</select>
 					</div>
 				</div>
@@ -291,6 +293,24 @@
 						</div>
 					</div>
 				</div>
+				
+				<div id="community-social-service-content" class="col-md-9 content">
+					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+						<h3>Community &amp; Social Service</h3>
+						<div class="bulleted-content"><i class="fas fa-handshake fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0"><b>United Nations Online Volunteer</b> &ndash; Developing a mobile app for Youngstars Foundation, Nigeria (ongoing project).</div>
+						</div>
+						<div class="bulleted-content"><i class="fas fa-handshake fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Participated in <b>The Leadership 30</b> program to spread awareness about the UN's Sustainable Development Goals.</div>
+						</div>
+						<div class="bulleted-content"><i class="fas fa-handshake fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Developed website for <b>Sparsh Empowering and Education, Navi Mumbai</b>, an NGO engaged in the upliftment of underprivileged children, youth, women and the elderly.</div>
+						</div>
+						<div class="bulleted-content"><i class="fas fa-handshake fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Participated in an outreach program at <b>Digha Village, Maharashtra</b> to create awareness among the youth about education and career opportunities.</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="social-div">
@@ -312,8 +332,8 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script>
-		let contentIds = "#about-me-content, #experience-content, #academic-projects-content, #honors-awards-content, #technical-skills-content";
-		let contentLinkIds = "#about-me-content-link, #experience-content-link, #academic-projects-content-link, #honors-awards-content-link, #technical-skills-content-link";
+		let contentIds = "#about-me-content, #experience-content, #academic-projects-content, #honors-awards-content, #technical-skills-content, #community-social-service-content";
+		let contentLinkIds = "#about-me-content-link, #experience-content-link, #academic-projects-content-link, #honors-awards-content-link, #technical-skills-content-link, #community-social-service-content-link";
 
 		let displayContent = function (contentName) {
 			let contentId = "#" + contentName + "-content";
@@ -346,6 +366,10 @@
 
 		$("#technical-skills-content-link").click(function () {
 			displayContent("technical-skills");
+		});
+
+		$("#community-social-service-content-link").click(function () {
+			displayContent("community-social-service");
 		});
 
 		$("#menu-select").on('change', function () {
