@@ -62,7 +62,8 @@
 						<a href="#" id="experience-content-link" class="list-group-item menu-list-item">Experience</a>
 						<a href="#" id="academic-projects-content-link" class="list-group-item menu-list-item">Academic Projects</a>
 						<a href="#" id="honors-awards-content-link" class="list-group-item menu-list-item">Honors &amp; Awards</a>
-						<a href="#" id="technical-skills-content-link" class="list-group-item menu-list-item">Technical Skills &amp; Certifications</a>
+						<a href="#" id="certifications-content-link" class="list-group-item menu-list-item">Specialization &amp; Certifications</a>
+						<a href="#" id="technical-skills-content-link" class="list-group-item menu-list-item">Technical Skills</a>
 						<a href="#" id="community-social-service-content-link" class="list-group-item menu-list-item">Community &amp; Social Service</a>
 					</div>
 					<div class="form-group">
@@ -71,7 +72,8 @@
 							<option value="experience">Experience</option>
 							<option value="academic-projects">Academic Projects</option>
 							<option value="honors-awards">Honors &amp; Awards</option>
-							<option value="technical-skills">Technical Skills &amp; Certifications</option>
+							<option value="certifications">Specialization &amp; Certifications</option>
+							<option value="technical-skills">Technical Skills</option>
 							<option value="community-social-service">Community &amp; Social Service</option>
 						</select>
 					</div>
@@ -243,6 +245,29 @@
 					</div>
 				</div>
 
+				<div id="certifications-content" class="col-md-9 content">
+					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+						<h3 class="mt-3">Specialization</h3>
+						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Deep Learning Specialization &ndash; Coursera | deeplearning.ai (Nov 2019)</div>
+						</div>
+						
+						<h3 class="mt-3">Certifications</h3>
+						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Machine Learning &ndash; Coursera | Stanford University (Jul 2018)</div>
+						</div>
+						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Certified Associate Developer &ndash; Oracle Cloud Platform Enterprise Mobile 2018 (Mar 2019)</div>
+						</div>
+						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
+							<div class="text-content lead mb-0">Android Certified Programmer &ndash; Suven Consultants & Technology Pvt. Ltd. (Oct 2015)</div>
+						</div>
+
+						<!-- <div class="certificate-badge mt-3">
+							<img src="img/OracleAssociate.png" alt="" class="img-fluid mb-3">
+						</div> -->
+					</div>
+				</div>
 
 				<div id="technical-skills-content" class="col-md-9 content">
 					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
@@ -295,14 +320,6 @@
 								</div>
 							</div>
 						</div>
-
-						<h3 class="mt-3">Certifications</h3>
-						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
-							<div class="text-content lead mb-0">Certified Associate Developer &ndash; Oracle Cloud Platform Enterprise Mobile 2018 (Mar 2019)</div>
-						</div>
-						<div class="bulleted-content"><i class="fas fa-award fa-lg bullet-point"></i>
-							<div class="text-content lead mb-0">Android Certified Programmer &ndash; Suven Consultants & Technology Pvt. Ltd. (Oct 2015)</div>
-						</div>
 					</div>
 				</div>
 				
@@ -344,8 +361,8 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script>
-		let contentIds = "#about-me-content, #experience-content, #academic-projects-content, #honors-awards-content, #technical-skills-content, #community-social-service-content";
-		let contentLinkIds = "#about-me-content-link, #experience-content-link, #academic-projects-content-link, #honors-awards-content-link, #technical-skills-content-link, #community-social-service-content-link";
+		let contentIds = "#about-me-content, #experience-content, #academic-projects-content, #honors-awards-content, #certifications-content, #technical-skills-content, #community-social-service-content";
+		let contentLinkIds = "#about-me-content-link, #experience-content-link, #academic-projects-content-link, #honors-awards-content-link, #certifications-content-link, #technical-skills-content-link, #community-social-service-content-link";
 
 		let displayContent = function (contentName) {
 			let contentId = "#" + contentName + "-content";
@@ -374,6 +391,10 @@
 
 		$("#honors-awards-content-link").click(function () {
 			displayContent("honors-awards");
+		});
+
+		$("#certifications-content-link").click(function () {
+			displayContent("certifications");
 		});
 
 		$("#technical-skills-content-link").click(function () {
